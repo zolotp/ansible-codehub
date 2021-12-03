@@ -8,6 +8,12 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
+[centos_nodes]
+127.0.0.1 ansible_connection=local
+
+[ubuntu_nodes]
+13.79.83.93 ansible_user=codehub
+
 # Ex 1: Ungrouped hosts, specify before any group headers.
 
 ## green.example.com
