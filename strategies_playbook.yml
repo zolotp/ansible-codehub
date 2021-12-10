@@ -1,0 +1,26 @@
+---
+
+- name: Strategies example
+  hosts: linux_nodes
+  become: yes
+  gather_facts: no
+  
+  
+  tasks:
+    
+    - name: Ping targets
+      ping: 
+      
+    - name: Sleep for 3s
+      shell: "sleep 3"
+      
+    - name: Uptime
+      command: "uptime"
+      register: result
+      
+    - name: Print Uptime info
+      debug:
+        var: result.stdout 
+     
+     
+    
